@@ -1,0 +1,268 @@
+
+<idoctype html>
+<head>
+	<style>
+		.Bubble{
+			margin-top: 600px;
+			width:50px; height:1500px; 
+			/* 1. 풍선 배경 파일지정을 스크립트에서 하기위해 일단 CSS에서 삭제 */
+			/* background:url('Bubble_1.gif'); */
+			/* background-size:100% auto; */
+			background-repeat:no-repeat;
+			animation: bMove 8s linear;
+		}
+
+		@keyframes bMove{
+			0%{ background-position: 0 900px; opacity:0;}
+			20%{opacity:1;}
+			80%{ opacity:1; }
+			100%{ background-position:0 0;opacity:0;}
+		}
+	</style>
+</head>
+<body>
+	<script>
+	setInterval(attachBubble,100);
+
+	function attachBubble(){
+		var t = document.createElement("div");
+		t.setAttribute("class","Bubble"); 
+		t.style.position = "absolute"; 
+		//1. 풍선의 배경 파일을 스크립트로 넣어주자 파일이름을 앞뒤로 나누고 사이에 랜덤값으로 1에서 4 사이의 값을 넣어주자
+		t.style.background = "url('bubble_" + randomBH(1,3) + ".png') no-repeat";
+		//2. 풍선의 이미지 사이즈 지정
+		t.style.backgroundSize = "100% auto";
+		t.style.top = randomBH(0,window.innerHeight) + "px";
+		t.style.left = randomBH(0,window.innerWidth) + "px";
+		t.addEventListener("animationend",remove);
+		document.body.appendChild(t);		
+	}
+	
+	//지워주기 함수(이건 그냥 복붙 )	
+	function remove(){
+		var t = event.target; //이벤트의 타겟을 t로 지정하고.
+		t.parentNode.removeChild(t); //그 엄마를 찾아서 자식중에 t를 지워라. 
+	}
+
+	//최소값과 최대값 사이의 임의의 숫자를 리턴하는 함수(복붙)
+	function randomBH(min, max) {
+  		min = Math.ceil(min);
+  		max = Math.floor(max);
+  		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+	</script>
+</body>
+
+<idoctype html>
+<head>
+	<link href='normalize.css' rel="stylesheet">
+	<style>
+		.section_1{height:0px;}
+		.section_2{height:0px;}
+		.section_3{height:0px;}
+		header{height:400px; background:; width:100%; }
+		header #logo{width:600px;height:200px;font-size: 1.5em;position:relative;transition: all 0.1s;}
+		h1{background:#c7e7f0;width: 1910px;}
+		h2{background:#f5b847;}
+		h3{color:white;}
+		h4{transition: all 1.5s;}
+
+		#titleA{transition: all 1.5s;}
+		#titleB{transition: all 1.5s;}
+		#titleC{transition: all 1.5s;}
+		#titleD{transition: all 1.5s;}
+		#titleE{transition: all 1.5s;}
+		#titleF{transition: all 1.5s;}
+		#titleG{transition: all 1.5s;}
+		#titleH{transition: all 1.5s;}
+		#titleI{transition: all 1.5s;}
+		#titleJ{transition: all 1.5s;}
+		#titleK{transition: all 1s;}
+		#titleL{transition: all 8s;}
+		#titleM{transition: all 10s;}
+		#titleN{transition: all 10s;}
+		#titleO{transition: all 13s;}
+
+	</style>
+</head>
+
+<body>
+
+
+
+
+<header id="header">
+	<div id="logo">
+		
+	</div>
+</header>
+
+
+<div class="section_1">
+	<h1 id="titleA" >
+	<img src="./bg1.png" style="width: 1910px;"></h1>
+</div>
+
+<div class="section_1">
+	<h4 id="titleZ">
+	<img src="./titl.png" style="width: 550px; padding-left: 650px;margin-top: 50px;"></h4>
+</div>
+
+<div class="section_1">
+	<h1 id="titleB" >
+	<img src="./bg2.png" style="width: 1910px; "></h1>
+</div>
+<div class="section_1">
+	<h1 id="titleC" >
+	<img src="./bg3.png" style="width: 1910px; ">
+	<h1>
+</div>
+
+
+
+<div class="section_2">
+	<h1 id="titleD" >
+	<img src="./bg4.png" style="width: 1910px; margin-top: 900px;"></h1>
+</div>
+<div class="section_2">
+	<h1 id="titleE" >
+	<img src="./bg5.png" style="width: 1910px; margin-top: 600px;"></h1>
+</div>
+<div class="section_2">
+	<h1 id="titleL" >
+	<img src="./sc1.png" style="width: 1000px; margin-top: 900px;"></h1>
+</div>
+<div class="section_3">
+	<h1 id="titleM" >
+	<img src="./sc2.png" style="width: 300px;margin-top: 1400px;"></h1>
+</div>
+<div class="section_3">
+	<h1 id="titleN" >
+	<img src="./sc3.png" style="width: 300px;margin-top: 1400px; "></h1>
+</div>
+
+
+
+<div class="section_3">
+	<h1 id="titleG" >
+	<img src="./bg4.png" style="width: 1910px;margin-top: 1600px;"></h1>
+</div>
+<div class="section_3">
+	<h1 id="titleH" >
+	<img src="./bg6.png" style="width: 1910px;margin-top: 1500px;"></h1>
+</div>
+<div class="section_3">
+	<h2 id="titleI" >
+	<img src="./bg7_2.png" style="width: 1910px;margin-top: 1600px;"></h1>
+</div>
+<div class="section_3">
+	<h2 id="titleJ" >
+	<img src="./bg8.png" style="width: 1910px; margin-top: 1600px;"></h1>
+</div>
+<div class="section_3">
+	<h1 id="titleK" >
+	<img src="./bg9.png" style="width: 1910px;margin-top: 1600px;"></h1>
+</div>
+<div class="section_3">
+	<h1 id="titleO" >
+	<img src="./sc4.png" style="width: 300px;margin-top: 1700px; "></h1>
+</div>
+
+
+
+<script>
+	window.onscroll = function(){
+		console.log(document.body.scrollTop);
+		var scrollH = document.body.scrollTop;
+		//if(scrollH > 150){
+			header.style.height = "50px";
+			header.style.position = "fixed";
+			header.style.top = "10px";
+			header.style.zIndex = "9999";
+			header.style.fontSize = "1em";
+			header.style.fontWeight = "400";
+			logo.style.left = "calc(8% - 100px)";
+		//}else{
+			header.style.height = "800px";
+			header.style.top = "0px";
+			header.style.fontSize = "7em";
+			header.style.fontWeight = "700";
+			logo.style.left = "calc(45% - 100px)";
+		//}
+
+		if(scrollH > 150){
+			titleZ.style.paddingTop = "250px";
+		}else{
+			titleZ.style.paddingTop = "50px";}
+
+
+		if(scrollH > 260){
+			titleA.style.paddingTop = "250px";
+		}else{
+			titleA.style.paddingTop = "50px";}
+
+		if(scrollH > 260){
+			titleB.style.paddingTop = "100px";
+		}else{
+			titleB.style.paddingTop = "200px";}
+
+		if(scrollH > 260){
+			titleC.style.paddingTop = "50px";
+		}else{
+			titleC.style.paddingTop = "250px";
+		}
+
+
+
+		if(scrollH > 1700){
+			titleH.style.paddingTop = "160px";
+		}else{
+			titleH.style.paddingTop = "120px";
+		}
+		if(scrollH > 1700){
+			titleI.style.paddingTop = "0px";
+		}else{
+			titleI.style.paddingTop = "250px";
+		}
+		if(scrollH > 1700){
+			titleJ.style.paddingTop = "100px";
+		}else{
+			titleJ.style.paddingTop = "0px";
+		}
+		if(scrollH > 1700){
+			titleK.style.paddingTop = "840px";
+		}else{
+			titleK.style.paddingTop = "600px";
+		}
+
+
+		if(scrollH > 350){
+			titleL.style.marginLeft="800px";
+		}else{
+			titleL.style.marginLeft="0px";}
+
+		if(scrollH > 500){
+			titleM.style.marginLeft="1800px";
+		}else{
+			titleM.style.marginLeft="0px";}
+
+		if(scrollH > 500){
+			titleN.style.marginLeft="0px";
+		}else{
+			titleN.style.marginLeft="1800px";}
+
+		if(scrollH > 800){
+			titleO.style.marginLeft="1800px";
+		}else{
+			titleO.style.marginLeft="0px";}
+
+
+
+
+
+	}
+</script>
+</body>
+
+
+
